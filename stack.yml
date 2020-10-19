@@ -14,21 +14,7 @@ services:
     ports:
       - 5432:5432
     volumes:
-    - ./postgresdata:/var/lib/postgresql/data  
-    
+    - ./postgresdata:/tmp
 
 
-
-#docker exec -it <container_name> bash
-#psql -U postgres
-#create database dvdrental;
-#exit
-#pg_restore -U postgres -d dvdrental Desktop/dvdrental.tar
-
-# these are in the data folder
-# psql -U postgres
-# CREATE DATABASE readychef;
-# \q
-#  psql -U postgres readychef < readychef.sql
-# repeat for other dbs
 
