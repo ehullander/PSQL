@@ -15,6 +15,7 @@ services:
       - 5432:5432
     volumes:
     - ./postgresdata:/tmp
+    - ./SQL:/SQL
 
 
 
