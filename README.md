@@ -1,4 +1,4 @@
-# SQL2
+# Practice PSQL with a Docker Container
 
 docker-compose -f stack.yml up  
 
