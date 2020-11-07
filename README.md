@@ -13,8 +13,6 @@ tar cfJ <db>.tar.xz <db>
 rm <db>
 ```
 
-
-
 # Manual Restore
 ```
 psql -U postgres  
