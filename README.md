@@ -1,12 +1,11 @@
 # Practice PSQL with a Docker Container
 
 ```
-docker-compose -f stack.yml up  
-
-docker exec -it <container_name> bash   
-cd SQL/backups; for i in $(ls *.tar.xz); do tar -xf ${i%.tar.xz} ; echo $i; psql -U postgres -c "create database ${i%.tar.xz}"; psql -U postgres -d ${i%.tar.xz} -f ${i%.tar.xz}; done
-
-
+$ docker-compose -f stack.yml up  
+# docker exec -w /SQL/backups -it psql_db_1 ./restore.sh
+```
+# Manual Restore
+```
 psql -U postgres  
 create database dvdrental;  
 \q  
