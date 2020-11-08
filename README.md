@@ -13,16 +13,8 @@ tar cfJ <db>.tar.xz <db>
 rm <db>
 ```
 
-# Manual Restore
-```
-psql -U postgres  
-create database dvdrental;  
-\q  
-pg_restore -U postgres -d dvdrental Desktop/dvdrental.tar  
+# pgAdmin4
 
- 
-psql -U postgres  
-CREATE DATABASE readychef;  
-\q  
-psql -U postgres readychef < readychef.sql  
+```
+$ docker run --rm -p 8080:80 -v pgadmin:/var/lib/pgadmin  -e 'PGADMIN_DEFAULT_EMAIL=user@domain.com'     -e 'PGADMIN_DEFAULT_PASSWORD=SuperSecret'     -d dpage/pgadmin4
 ```
